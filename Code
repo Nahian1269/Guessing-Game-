@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<conio.h>
+#include <stdlib.h>
+#include<math.h>
+
+int main()
+
+{
+    int num,guess,attempts=4;
+    num = rand()%100+1;
+
+    printf("Guess My Number\n\n");
+
+    printf("Instructions: In this game you are player 02 and player 01 is machine . please guess the number between 1 to 100\n");
+    printf("-----------------------------------\n");
+
+    do{
+      printf("Enter the guess number between 1 to 100: \n");
+      scanf("%d",&guess);
+      attempts--;
+      if(attempts==0)
+    {
+        printf("You are out of attempts");
+        break ;
+    }
+
+      if(guess>num)
+      {
+
+          printf("Wrong . %d chance(s) left\n",attempts);
+
+      }
+
+        else if(guess<num)
+        {
+            printf("Wrong . %d chance(s) left\n",attempts);
+
+        }
+        else
+        {
+            printf(" Right .Player 2 wins\n ");
+        }
+    }
+    while(guess != num);
+
+
+    return 0;
+
+
+
+
+}
