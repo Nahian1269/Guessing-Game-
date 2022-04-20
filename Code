@@ -6,8 +6,9 @@
 int main()
 
 {
-    int num,guess,attempts=4;
-    num = rand()%100+1;
+    int num,guess,attempts=10;
+    srand(time(0));
+    num = rand()%10+1;
 
     printf("Guess My Number\n\n");
 
@@ -44,9 +45,11 @@ int main()
     while(guess != num);
 
 
+
     return 0;
 
 
 
 
 }
+
